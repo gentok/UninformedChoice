@@ -1,0 +1,25 @@
+## List of files that should be ignored from git
+# Ignore following folders
+codes/old/
+codes/dropped/
+data/old/
+outputs/old/
+papers/old/
+slides/old/
+# Ignore Data Files Inside Data Folder
+data/*.rds
+# Ignore Analysis Output Files
+outputs/*.rda
+# Ignore generated latex files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.bib.sav
+*.log
+# Ignore R related files
+*.Rhistory
