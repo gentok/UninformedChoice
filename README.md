@@ -11,11 +11,12 @@ Scholarly debate on civic competence often assumes that political knowledge is t
 
 ## Original Datasets & Functions
 
-1. [Cooperative Congressional Election Study (CCES)](https://cces.gov.harvard.edu)
+1. [Cooperative Congressional Election Study (CCES)](https://cces.gov.harvard.edu): used in Study 1
    * CCES2008: Download Version 6.0 Dataset (Stata Binary)
    * CCES2016: Download Version 4.0 Dataset (Stata Binary) 
 2. [CQ Voting and Elections Collection](http://library.cqpress.com/elections/): Check out my another repository [HERE](https://github.com/gentok/cqvec) for how you can compile the data obtained from the source website.
-3. [<code>cotextvoting</code>](https://gentok.github.io/contextvoting/) package: Custom R package used for the analysis in Study 3.
+3. [American National Election Studies (ANES)](https://electionstudies.org): used in Study 2
+4. [<code>cotextvoting</code>](https://gentok.github.io/contextvoting/) package: Custom R package used for the analysis in Study 3
 
 <!-- ## Generate Datasets for the Analysis
 
