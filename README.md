@@ -1,6 +1,6 @@
 ## Local Bandwagoning and National Balancing: How Uninformed Voters Respond to the Partisan Environment and Why It Matters
 
-* #### [Working Paper (4/9/2019)](papers/Kato2019loba_v11.pdf)
+* #### [Working Paper (6/26/2019)](papers/Kato2019loba_v11.pdf)
 * #### [Presentation Slide (4/6/2019)](slides/Uninformed_Choice_slide_latest.pdf)
 
 ## Author
