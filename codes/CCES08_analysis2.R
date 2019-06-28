@@ -16,10 +16,14 @@ rm(list=ls())
 ## Library Required Packages
 library(rprojroot);library(questionr)
 
-## Set Working Directory (Automatically or Manually) ##
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path)); #setwd("../") #In RStudio
-projdir <- find_root(has_file("README.md")); projdir; setwd(projdir) #In Atom
-#setwd("C:/GoogleDrive/Projects/Uninformed_Choice")
+## Set Working Directory (Automatically) ##
+if (rstudioapi::isAvailable()==TRUE) {
+  setwd(dirname(rstudioapi::getActiveDocumentContext()$path)); 
+} 
+projdir <- find_root(has_file("thisishome.txt"))
+cat(paste("Working Directory Set to:\n",projdir))
+setwd(projdir)
+# For Plotting
 plotdir <- "papers/figures"
 
 ## For Analysis

@@ -6,6 +6,8 @@
 ## Purpose: Functions to Analyze Data                                          ##
 #################################################################################
 
+library(lme4)
+
 #################################################
 ## Functions and Formulas to Simplify Analyses ##
 #################################################
@@ -247,7 +249,7 @@ func_logitml <- function(d,mod,w="wt",...){
   print(table(dx[,all.vars(mod)[1]]))
   
   # Analysis
-  est<-glmer(mod,data=dx,weights=wtvar,family=binomial("logit"),...)
+  est <- glmer(mod,data=dx,weights=wtvar,nAGQ=1,family=stats::binomial("logit"),...)
   est$dt <- dx
   
   return(est)

@@ -1,15 +1,24 @@
 ## List of files that should be ignored from git
+
 # Ignore following folders
-codes/old/
-codes/dropped/
+codes/
 data/old/
 outputs/old/
 papers/old/
 slides/old/
+codes_cces/processing
+codes_cces/old
+codes_anes/processing
+codes_anes/old
+codes_abm/processing
+codes_abm/old
+
 # Ignore Data Files Inside Data Folder
 data/*.rds
+
 # Ignore Analysis Output Files
 outputs/*.rda
+
 # Ignore generated latex files
 *.aux
 *.bbl
