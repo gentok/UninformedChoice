@@ -1,6 +1,6 @@
 #################################################################################
 ## File Name: CCES16_analysis1logit.R                                          ##
-## Date: 05 May 2019                                                           ##
+## Date: 24 Jul 2019                                                           ##
 ## Author: Gento Kato                                                          ##
 ## Project: Uninformed Choice                                                  ##
 ## Purpose: Analyze Data                                                       ##

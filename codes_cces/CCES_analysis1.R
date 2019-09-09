@@ -46,18 +46,18 @@ dimp16 <- dimp5
 
 # Save County and State Params
 
-param_voting <- readRDS("data/param_voting.rds")
-param_voting <- param_voting[-c(6,7),]
-gdpadd <- rbind(gdp08$gd0[grep("pvi_",row.names(gdp08$gd0)),],
-                gdp16$gd0[grep("pvi_",row.names(gdp16$gd0)),])
-gdpadd$Median <- NA
-gdpadd$SE <- NA
-param_voting <- rbind(param_voting,
-                      colMeans(gdpadd[,c("Mean","Median","SE","lowerCI","upperCI")][c(1,3),])/10,
-                      colMeans(gdpadd[,c("Mean","Median","SE","lowerCI","upperCI")][c(2,4),])/10)
-rownames(param_voting)[6:7] <- c("pvi_state","pvi_county")
-param_voting
-saveRDS(param_voting,"data/param_voting.rds")
+# param_voting <- readRDS("data/param_voting.rds")
+# param_voting <- param_voting[-c(6,7),]
+# gdpadd <- rbind(gdp08$gd0[grep("pvi_",row.names(gdp08$gd0)),],
+#                 gdp16$gd0[grep("pvi_",row.names(gdp16$gd0)),])
+# gdpadd$Median <- NA
+# gdpadd$SE <- NA
+# param_voting <- rbind(param_voting,
+#                       colMeans(gdpadd[,c("Mean","Median","SE","lowerCI","upperCI")][c(1,3),])/10,
+#                       colMeans(gdpadd[,c("Mean","Median","SE","lowerCI","upperCI")][c(2,4),])/10)
+# rownames(param_voting)[6:7] <- c("pvi_state","pvi_county")
+# param_voting
+# saveRDS(param_voting,"data/param_voting.rds")
 
 # Coefficient Plots 
 

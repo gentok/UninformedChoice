@@ -46,7 +46,7 @@
 }
 
 @Article{Battaglini2010thsw,
-  author    = {Macro Battaglini and Rebecca B. Morton and Thomas R. Palfrey},
+  author    = {Marco Battaglini and Rebecca B. Morton and Thomas R. Palfrey},
   title     = {The Swing Voter's Curse in the Laboratory},
   journal   = {The Review of Economic Studies},
   year      = {2010},
@@ -101,12 +101,12 @@
   booktitle = {The Oxford Handbook of Public Choice},
   year      = {2016},
   abstract  = {Standard economic reasoning assumes that people vote instrumentally, i.e., that the sole motivation to vote is to influence the outcome of an election. In contrast, voting is expressive if voters derive utility from the very act of expressing support for one of the options by voting for it, and this utility is independent of whether the vote affects the outcome. This paper surveys experimental tests of expressive voting with a particular focus on the low-cost theory of expressive voting. The evidence for the low-cost theory of expressive voting is mixed. },
+  comment   = {https://ssrn.com/abstract=2867954},
   file      = {Tyran2016exev.pdf},
   owner     = {11 Experiment},
   points    = {<N>},
   timestamp = {2017.11.27},
   update    = {SVC Experiment},
-  url       = {https://ssrn.com/abstract=2867954},
 }
 
 @Article{Huckfeldt2014nobi,
@@ -223,8 +223,8 @@ As a case in point, an examination of the composition of contemporary legislativ
   number    = {Part B},
   pages     = {224-241},
   issn      = {0176-2680},
-  note      = {Behavioral Political Economy},
   abstract  = {Abstract This paper surveys the literature on psychological and strategic mental processes of bandwagon behavior, discusses the literature of bandwagon behavior in the context of the two different types, bandwagon vote choices and bandwagon abstention effects, and examines the rationality of other-regarding bandwagon vote choices. Key experimental results are reported to investigate the extent that bandwagon behavior can be explained by other-regarding preferences in contrast to a psychological desire to simply support a winner. We find support for purely psychological non-other-regarding bandwagon behavior but primarily when subjects have information about the distribution of voter choices in previous elections but individual choices are private. Interestingly, when voting is public this type of bandwagon behavior disappears and bandwagon behavior that could be other-regrading is much higher. Given that observability increases other-regarding behavior in other contexts, our results suggest that some of the observed bandwagon behavior may be explained by other-regarding preferences as well.},
+  comment   = {Behavioral Political Economy},
   file      = {Morton2015whmo.pdf},
   keywords  = {Bandwagon Behavior; Majority Voting; Other-regarding Voting; Secret Ballots},
   owner     = {11 Experiment},
@@ -312,6 +312,7 @@ As a case in point, an examination of the composition of contemporary legislativ
   publisher = {Cambridge University Press},
   year      = {1995},
   author    = {Alesina, Alberto and Rosenthal, Howard},
+  address   = {Cambridge},
   file      = {:Alesina1995papo.pdf:PDF},
   owner     = {00 Pol Beh},
   timestamp = {2019-05-04},
@@ -334,6 +335,17 @@ As a case in point, an examination of the composition of contemporary legislativ
   points    = {<NR>},
   timestamp = {2016.11.25},
   update    = {Uninformed / SVC Experiment},
+}
+
+@Book{Bendor2011beth,
+  title     = {A Behavioral Theory of Elections},
+  publisher = {Princeton University Press},
+  year      = {2011},
+  author    = {Jonathan Bendor and Daniel Diermeier and David A. Siegel and Michael M. Ting},
+  file      = {:Bendor2011beth.pdf:PDF},
+  owner     = {00 Method},
+  timestamp = {2019-06-07},
+  update    = {Uninformed},
 }
 
 @Book{Adams2005unth,
@@ -545,7 +557,7 @@ As a case in point, an examination of the composition of contemporary legislativ
   publisher     = {Cambridge University Press},
   year          = {1992},
   author        = {John R. Zaller},
-  address       = {New York},
+  address       = {Cambridge},
   comment       = {Have Copy},
   date-added    = {2013-04-07 23:38:09 +0900},
   date-modified = {2013-07-09 00:43:17 +0900},
@@ -578,7 +590,7 @@ As a case in point, an examination of the composition of contemporary legislativ
 
 @Article{Kedar2006hovo,
   author    = {Orit Kedar},
-  title     = {How voters work around institutions: Policy balancing in staggered elections},
+  title     = {How Voters Work Around Institutions: Policy Balancing in Staggered Elections},
   journal   = {Electoral Studies},
   year      = {2006},
   volume    = {25},
@@ -713,7 +725,8 @@ As a case in point, an examination of the composition of contemporary legislativ
   title         = {The Rational Public: Fifty Years of Trends in Americans' Policy Preferences},
   publisher     = {University of Chicago Press},
   year          = {1992},
-  author        = {B.I. Page and R.Y. Shapiro},
+  author        = {Benjamin I. Page and Robert. Y. Shapiro},
+  address       = {Chicago},
   comment       = {Have Copy},
   date-added    = {2013-04-07 23:40:03 +0900},
   date-modified = {2013-07-09 00:10:03 +0900},
@@ -765,6 +778,7 @@ As a case in point, an examination of the composition of contemporary legislativ
   publisher = {Cambridge University Press},
   year      = {1995},
   author    = {Robert Huckfeldt and John Sprague},
+  address   = {Cambridge},
   file      = {Huckfeldt1995cipo.pdf},
   owner     = {00 Pol Beh},
   points    = {<N>},
@@ -1013,17 +1027,6 @@ As a case in point, an examination of the composition of contemporary legislativ
   publisher           = {American Economic Association},
   timestamp           = {2013.11.03},
   update              = {Uninformed / SVC Experiment / 2013秋栗崎研},
-}
-
-@Book{Bendor2011beth,
-  title     = {A Behavioral Theory of Elections},
-  publisher = {Princeton University Press},
-  year      = {2011},
-  author    = {Jonathan Bendor and Daniel Diermeier and David A. Siegel and Michael M. Ting},
-  file      = {:Bendor2011beth.pdf:PDF},
-  owner     = {00 Method},
-  timestamp = {2019-06-07},
-  update    = {Uninformed},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

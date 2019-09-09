@@ -1,6 +1,6 @@
 #################################################################################
-## File Name: CCES08_analysis1mrp.R                                            ##
-## Date: 15 APr 2019                                                           ##
+## File Name: CCES08_analysis1logit.R                                          ##
+## Date: 24 Jul 2019                                                           ##
 ## Author: Gento Kato                                                          ##
 ## Project: Uninformed Choice                                                  ##
 ## Purpose: Analyze Data                                                       ##

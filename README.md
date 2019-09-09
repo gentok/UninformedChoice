@@ -1,13 +1,13 @@
-## Local Bandwagoning and National Balancing: How Uninformed Voters Respond to the Partisan Environment and Why It Matters
+## Local Bandwagoning and National Balancing: How Uninformed Voters Respond to the Partisan Environment
 
-* #### [Working Paper (6/26/2019)](papers/Kato2019loba_v11.pdf)
-* #### [Presentation Slide (4/6/2019)](slides/Uninformed_Choice_slide_latest.pdf)
+* #### [Working Paper (9/9/2019)](papers/Kato2019loba_v14.pdf)
+<!-- * #### [Presentation Slide (4/6/2019)](slides/Uninformed_Choice_slide_latest.pdf) -->
 
 ## Author
 Gento Kato (gento.badgerATgmail.com)
 
 ## Abstract 
-Scholarly debate on civic competence often assumes that political knowledge is the prerequisite for systematic and ``correct'' decision-making. Uninformed voters, then, are portrayed as unsystematic and misguided decision-makers. The current study challenges this assumption by arguing that uninformed voters may not rely on (potentially misguided) individual preferences but rather refer to the partisan environment, the partisan voting patterns in past elections, to guide their decisions. The analysis of Cooperative Congressional Election Study (CCES) and American National Election Studies (ANES) provides the supporting evidence to this claim. Uninformed voters respond to the partisan environment in two ways: First, they \textit{bandwagon} with the local partisan environment; second, they \textit{balance} against the national partisan environment. The consequences of this context-based uninformed voting are evaluated through agent-based simulation. The results provide the view of uninformed voters as more systematic and effective decision-makers than previously suggested.
+Scholarly debate on civic competence often assumes that political knowledge is the prerequisite for systematic and ``correct'' decision-making. Uninformed voters, then, are portrayed as unsystematic and misguided decision-makers. The current study challenges this assumption by arguing that uninformed voters may not rely on (potentially misguided) individual preferences but rather refer to the partisan environment, the partisan voting patterns in past elections, to guide their decisions. The analysis of Cooperative Congressional Election Study (CCES) and American National Election Studies (ANES) provides the supporting evidence to this claim. Uninformed voters respond to the partisan environment in two ways: First, they \textit{bandwagon} with the local partisan environment; second, they \textit{balance} against the national partisan environment. The results provide the view of uninformed voters as more systematic and effective decision-makers than previously suggested.
 
 ## Original Datasets & Functions
 
@@ -16,7 +16,7 @@ Scholarly debate on civic competence often assumes that political knowledge is t
    * CCES2016: Download Version 4.0 Dataset (Stata Binary) 
 2. [CQ Voting and Elections Collection](http://library.cqpress.com/elections/): Check out my another repository [HERE](https://github.com/gentok/cqvec) for how you can compile the data obtained from the source website.
 3. [American National Election Studies (ANES)](https://electionstudies.org): used in Study 2
-4. [<code>cotextvoting</code>](https://gentok.github.io/contextvoting/) package: Custom R package used for the analysis in Study 3
+<!-- 4. [<code>cotextvoting</code>](https://gentok.github.io/contextvoting/) package: Custom R package used for the analysis in Study 3 -->
 
 <!-- ## Generate Datasets for the Analysis
 
@@ -40,7 +40,7 @@ Scholarly debate on civic competence often assumes that political knowledge is t
 
  * *codes_cces*: R codes used for Study 1
  * *codes_anes*: R codes used for Study 2
- * *codes_abm*: R codes used in Study 3
+ <!-- * *codes_abm*: R codes used in Study 3 -->
  * *data*: Storage for datasets (Most of Datasets will be generated through R codes in *codes* folder)
  * *outputs*: Results (plots) generated for the presentation
  * *papers*: Storage for current versions of working papers

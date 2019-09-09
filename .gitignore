@@ -10,8 +10,9 @@ codes_cces/processing
 codes_cces/old
 codes_anes/processing
 codes_anes/old
-codes_abm/processing
-codes_abm/old
+codes_abm/
+# codes_abm/processing
+# codes_abm/old
 
 # Ignore Data Files Inside Data Folder
 data/*.rds

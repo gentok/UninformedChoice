@@ -1,6 +1,6 @@
 #################################################################################
-## File Name: CCES08_analysis1mrp.R                                            ##
-## Date: 15 APr 2019                                                           ##
+## File Name: CCES08_analysis1mer.R                                            ##
+## Date: 24 Jul 2019                                                           ##
 ## Author: Gento Kato                                                          ##
 ## Project: Uninformed Choice                                                  ##
 ## Purpose: Analyze Data                                                       ##
@@ -37,7 +37,7 @@ library(texreg)
 library(Amelia)
 
 ## Custom Functions
-source("codes_vx/CCES_analysis0_functions.R")
+source("codes_cces/CCES_analysis0_functions.R")
 
 ## Initial Data Location
 # dloc <- "data/ucdcces08s_cxt.rds"; wtname <- "wt"
@@ -96,7 +96,7 @@ gdp1x <- gd_export(mp1x,d,type=2)
 gp1x <- plot_coef(list(gdp1x$gd0[,2:4],gdp1x$gd1[,2:4]),
                  m.names = c("Uninformed","Informed"), #odds=T,
                  title = "Impact on Presidential Vote Choice 2008 \n(1=McCain, 0=Obama)",
-                 custom.footnote = extract_gofchr(mp1$imp1),
+                 custom.footnote = extract_gofchr(mp1x$imp1),
                  custom.variable.names = vn1[-1])
 
 # With Individual Preference
@@ -105,7 +105,7 @@ gdp2x <- gd_export(mp2x,d,type=2)
 gp2x <- plot_coef(list(gdp2x$gd0[,2:4],gdp2x$gd1[,2:4]),
                   m.names = c("Uninformed","Informed"), #odds=T,
                   title = "Impact on Presidential Vote Choice 2008 \n(1=McCain, 0=Obama)",
-                  custom.footnote = extract_gofchr(mp2$imp1),
+                  custom.footnote = extract_gofchr(mp2x$imp1),
                   custom.variable.names = vn2[-1])
 
 # With Demographic Controls
@@ -114,7 +114,7 @@ gdp3x <- gd_export(mp3x,d,type=2)
 gp3x <- plot_coef(list(gdp3x$gd0[,2:4],gdp3x$gd1[,2:4]),
                   m.names = c("Uninformed","Informed"), #odds=T,
                   title = "Impact on Presidential Vote Choice 2008 \n(1=McCain, 0=Obama)",
-                  custom.footnote = extract_gofchr(mp3$imp1),
+                  custom.footnote = extract_gofchr(mp3x$imp1),
                   custom.variable.names = vn3[-1])
 
 # Summary Tables
@@ -128,16 +128,16 @@ vnt <- c(vn3[1],"Knowledge",
          vn3[7:16],paste0("Knowledge*",sub(" \\(.*\\)","",vn3[7:16])))
 
 (tp0x <- screenreg(list(mp1x,mp2x,mp3x),
-                  custom.coef.names = vnt,
-                  caption = "Impact on Presidential Vote Choice",
-                  single.row = TRUE))
+                   custom.coef.names = vnt,
+                   caption = "Impact on Presidential Vote Choice",
+                   single.row = TRUE))
 tpx <- texreg(list(mp1x,mp2x,mp3x),
-             custom.coef.names = vnt,
-             caption = "Impact on Presidential Vote Choice",
-             booktabs=TRUE,dcolumn=TRUE,
-             single.row = TRUE)
+              custom.coef.names = vnt,
+              caption = "Impact on Presidential Vote Choice",
+              booktabs=TRUE,dcolumn=TRUE,
+              single.row = TRUE, file="outputs/cces08tabmer.tex")
 
 # Save output
 save(dimp5,mp1x,gdp1x,gp1x,mp2x,gdp2x,gp2x,mp3x,gdp3x,gp3x,
      vnt,tp0x,tpx, 
-     file="codes_vx/processing/CCES08_analysis1mer.rda")
+     file="codes_cces/processing/CCES08_analysis1mer.rda")

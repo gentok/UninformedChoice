@@ -1,6 +1,6 @@
 #################################################################################
-## File Name: CCES_analysis0_functions.R                                       ##               ##
-## Date: 21 Feb 2018                                                           ##
+## File Name: CCES_analysis0_functions.R                                       ##
+## Date: 24 Jul 2019                                                           ##
 ## Author: Gento Kato                                                          ##
 ## Project: Uninformed Choice                                                  ##
 ## Purpose: Functions to Analyze Data                                          ##
@@ -29,9 +29,9 @@ fpsoc <- formula(vpres ~ knidx +
 # Individual Preference
 fpind <- formula(  ~ . + 
                    knidx*idedistsq_prepadv + 
-                   knidx*pid + 
-                   knidx*evecon
-                )
+                   knidx*evecon + 
+                   knidx*pid
+                 )
 
 # Control Variable
 fctl <- formula(  ~ . + 
@@ -65,8 +65,8 @@ vn3 <- c("(Intercept)",
          "State PVI (By 10%)",
          "County PVI (By 10%)",
          "Ideological Advantage",
-         "Partisanship",
          "Retrospective Economic Evaluation",
+         "Partisanship",
          "Female",
          "Age",
          "Age Squared",

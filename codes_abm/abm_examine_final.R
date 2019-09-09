@@ -161,7 +161,7 @@ m4s <- lm(inf_aggloss_blue4 - inf_aggloss_red4 ~
 summary(m4s)
 
 #'
-#' ## Prepartin Functions for Visualization
+#' ## Prepartion Functions for Visualization
 #'
 
 #install.packages("devtools")

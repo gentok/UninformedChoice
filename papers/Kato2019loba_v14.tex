@@ -1,0 +1,275 @@
+%%% CLASS SETTING %%%
+\documentclass[letterpaper, 12pt]{article}
+\usepackage{natbib}
+\usepackage[margin=1in]{geometry} % sets page layout 
+\bibpunct[, ]{(}{)}{,}{a}{}{,} % sets the punctuation of the bibliography entires.
+\usepackage{authblk} 
+
+%%% Paper Information %%%
+\title{Local Bandwagoning and National Balancing: How Uninformed Voters Respond to the Partisan Environment} % set the title of the document
+\author{Gento Kato\thanks{Gento Kato is Ph.D. Student, Department of Political Science, One Shields Avenue Davis, CA 95616 (gkato@ucdavis.edu). The previous version of this paper was presented at the 77th Annual Midwest Political Science Association Conference, Palmer House Hilton, Chicago, IL, April 6, 2019. The latest version of this paper is available at \url{https://github.com/gentok/UninformedChoice}.}}
+\affil{University of California, Davis}
+\date{Last Update: September 9, 2019}
+
+% Other Packages/Settings
+\usepackage{amsfonts, amsmath, amssymb, bm} %Math fonts and symbols
+\usepackage[format=hang, justification=centering]{caption}
+\usepackage{dcolumn, multirow} % decimal-aligned columns, multi-row cells
+\usepackage{booktabs} % Table formatting
+\usepackage{graphicx, subfigure, float} % graphics commands
+\usepackage[colorlinks=true, citecolor=blue]{hyperref}
+\usepackage{setspace}% allows toggling of double/single-spacing
+\doublespace % set document spacing to double
+%\usepackage{endnotes}
+%\let\footnote=\endnote
+% Draw figure
+% \usepackage{tikz}
+% \usetikzlibrary{calc}
+% Add note to Figures
+\newcommand{\floatnote}[1]{\vspace{\abovecaptionskip}\caption*{\textbf{Note:} #1}\vspace{-\abovecaptionskip}}
+% Change section font
+\usepackage{sectsty} 
+\sectionfont{\fontsize{14}{14}\selectfont} 
+\subsectionfont{\fontsize{12}{12}\selectfont\itshape} 
+\subsubsectionfont{\fontsize{12}{12}\selectfont} 
+% Move figures to the last
+%\usepackage[figuresonly]{endfloat} %nomarkers, to avoid markers
+%\renewcommand{\listoffigures}{} % but suppress these lists
+
+\begin{document}
+
+\begin{titlepage}
+    
+    \singlespace
+    \maketitle
+    \thispagestyle{empty}
+    
+    % \clearpage
+    % \thispagestyle{empty}
+    
+    \begin{abstract}
+        Scholarly debate on civic competence often assumes that political knowledge is the prerequisite for systematic and ``correct'' decision-making. Uninformed voters, then, are portrayed as unsystematic and misguided decision-makers. The current study challenges this assumption by arguing that uninformed voters may not rely on (potentially misguided) individual preferences but rather refer to the partisan environment, the partisan voting patterns in past elections, to guide their decisions. The analysis of Cooperative Congressional Election Study (CCES) and American National Election Studies (ANES) provides the supporting evidence to this claim. Uninformed voters respond to the partisan environment in two ways: First, they \textit{bandwagon} with the local partisan environment; second, they \textit{balance} against the national partisan environment. The results provide the view of uninformed voters as more systematic and effective decision-makers than previously suggested.
+    \end{abstract}
+    \end{titlepage}
+    
+    \clearpage
+    \doublespace
+
+    \par In the studies of voter competence, the non-randomness and ``correctness'' of voting decisions are believed to be strictly increasing in the level of political knowledge. Uninformed voters, under this view, are portrayed as the most unsystematic and misguided decision-makers. Their individual preferences are unstable \citep{Converse1964thna, Zaller1992thna}, internally inconsistent \citep{Broockman2016apto}, or misinformed \citep{Kuklinski2000mian, Fowler2014thpo}. The evidence often leads to the conclusion that uninformed voting cannot be explained systematically. Any deviation of uninformed votes from informed votes \citep{Bartels1996unvo} is attributed to biased preference formation of uninformed voters. Yet, this conclusion is the assumption rather than the explanation of the nature of uninformed voting. Previous studies rarely explore the possible reasoning behind uninformed voting patterns.
+    
+    \par Given this gap in literature, this paper asks the following research question: \textit{how can the behavior of uninformed voters be systematically explained?} There are two propositions. First, I argue that individual preferences \textit{do not} explain the behavior of uninformed voters. Uninformed voters know that their preferences are weakly reasoned and potentially biased, and thus have no incentive to use their own preference to inform their decisions. Second, partisan environment, represented by aggregated partisan voting patterns from past elections \citep{Miller1956onpo, Putnam1966poat}, explains uninformed voting. If a voter is informed, he or she has no reason to refer to partisan contexts. For uninformed voters, however, two contrasting sets of logic, \textit{bandwagon} and \textit{balance}, explain how and why contexts can be useful for their voting decisions.
+    
+    \par This paper consists of two studies that assess the implication of context-based uninformed voting. Both studies test propositions through the analysis of American presidential elections. The first study assesses the role of local partisan environments through the 2008 and 2016 Cooperative Congressional Election Study (CCES), and the second study examines the role of national partisan environments through 1972--2016 American National Election Studies (ANES). 
+    
+    \par The empirical results show that uninformed and informed voters base their decisions on separate sets of resources. Partisan environments explain uninformed voting but not informed voting; individual perceptions of ideological proximity and valence differential explain informed voting but not uninformed voting. Furthermore, the role of partisan context changes by the level of context: uninformed voters bandwagon with local partisan environments but balance against national partisan environments. 
+    % The simulation results imply that especially when the knowledge level is highly unequal across partisan groups, the conditional strategy of context-based uninformed voting produces more favorable democratic outcomes than alternative strategies.
+    
+    \par The inquiry in the current paper sheds new lights on the studies of voting behavior. First, it helps to understand the decision-making process of uninformed voters. Previous empirical studies often emphasize the inconsistent and misguided nature of uninformed preferences, but this paper offers the picture of uninformed voters who can (at least partially) cope with this disadvantage. Second, it opens up a new way to assess voter competence. Instead of asking if voters are informed enough to acquire ``correct'' preference, we can ask whether the behavioral rules of uninformed voters contribute to the individual or social welfare. Having uncertain and ``incorrect'' individual preferences does not necessarily undermine the quality of democratic decision-making.
+    
+    \section*{Information Effects Unexplained}
+    
+    \par The capacity of citizens to make competent decisions is one of the main targets of endeavor in the studies of democratic voting behavior. Scholars repeatedly suggest that ordinary voters rarely hold a sufficient level of political knowledge to form consistent political preferences. American voters are uninformed about the wide range of political facts \citep{Dellicarpini1996wham}, and those ill-informed voters cannot hold a political ideology that is consistent across time and issues \citep{Converse1964thna, Zaller1992thna, Broockman2016apto}. While some argue that voters need only necessary signals, not the full set of factual knowledge, to form ``informed'' preferences \citep[e.g.,][]{Lupia1994shve}, it is shown that signaled preferences can be biased and misleading \citep{Kuklinski2000mian, Fowler2014thpo, Boudreau2015loin}.
+
+    \par In the search for implications of this widely documented ignorance, scholars have been making the empirical assessment of ``information effects.'' They are interested in how uninformed voting patterns deviate from informed counterparts. In his canonical study, \cite{Bartels1996unvo} analyzes the presidential vote choice in the American National Election Study and demonstrates that informed and uninformed voters have different tendencies in how demographic characteristics influence the voting decisions. He further shows that those differential voting patterns have a sizable influence on aggregated electoral outcomes. Similarly, \cite{Arnold2012thel} analyzes Comparative Study of Electoral Systems (CSES) and shows that hypothetical fully informed voting may change the electoral outcome across a wide range of democracies. 
+    
+    \par The substantive implications of these empirical findings, however, are not always clear and generalizable. The interpretations of differences are mostly descriptive and rarely offer a systematic explanation. As a result, we have little understanding as to why there are differences between uninformed and informed voting and how they influence the democratic outcome. The next section introduces theories of voting that can offer those missing explanations. %to move the scholarly discussion forward.
+    
+    \section*{Uninformed Voting and the Partisan Environment}
+
+    \par The accumulation of voting research offers several candidate explanations regarding how and why uninformed voting patterns differ from informed voting patterns. The most straightforward explanation is that uninformed voters make decisions based on the perception of the state of the world that deviates from the informed perception. This explanation implies that individual preferences (i.e., ideology and valence evaluation) predict uninformed and informed voting in the same manner; differences appear because less informed voters receive preference signals that are potentially more biased and less stable.
+
+    \par Suppose that two candidates from two parties, $B$ and $R$, are running in a plurality election. The following probabilistic voting function can describe the above voting calculus:
+    \begin{align}
+        Pr(\text{Vote R})_i  &=  \Lambda\left( b_1\left( \left(\widehat{\delta_i-\Delta_{R}}\right)^2 - \left(\widehat{\delta_i-\Delta_{B}}\right)^2 \right) + b_2\left(\widehat{\Theta_{R} - \Theta_{B}}\right) + \gamma_i + \epsilon_i \right) \label{eq1} \\
+        \widehat{\delta_i-\Delta_{R}} &= \delta_i-\Delta_{R} + \eta_{\Delta_R}(k_i) \label{eq2} \\
+        \widehat{\delta_i-\Delta_{B}} &= \delta_i-\Delta_{B} + \eta_{\Delta_B}(k_i) \label{eq3} \\
+        \widehat{\Theta_{R} - \Theta_{B}} &= \Theta_{R} - \Theta_{B} + \eta_{\Theta}(k_i) \label{eq4}
+    \end{align}
+    \noindent In \autoref{eq1}, the probability of voter $i$ choosing party $R$ is the inverse logit function $\Lambda$ of following components: The perception of relative proximity of $i$'s ideology $\delta_i$ to party $R$'s ideology $\Delta_R$ than to party $B$'s ideology $\Delta_B$ \citep{Downs1957anec}; the perception of valence or quality advantage (or disadvantage) of party $R$ over party $B$ candidates $\Theta_{R} - \Theta_{B}$ \citep{Adams2011whca}; utility from group identity $\gamma_i$ such as partisanship and demographic groups \citep{Campbell1964tham,Tajfel1986thso}; and other random disturbances $\epsilon_i$. $b_1, b_2 \geq 0$ are coefficients attached to relative ideological proximity and valance differential. \autoref{eq2}, \autoref{eq3}, and \autoref{eq4} show that the perception of ideological proximity and valence evaluation consists of true proximity or evaluation and error $\eta(k_i)$ (unobservable to $i$) drawn from some distribution $f_\eta(k_i)$. Both expected value (i.e., bias) and variance (i.e., instability) of $f_\eta(k_i)$ are shrinking in political knowledge $k_i \in [0,1]$ and converge to $0$ when $k_i=1$. In this model, uninformed voters (i.e., low $k_i$) make different choice than informed voters (i.e., high $k_i$) only because random errors are contaminating their perception of ideology and valence.
+
+    \par However, there are reasons to expect that uninformed voters rely less on their perception of ideology and valence than informed voters do. Extending the voting model suggested in \cite{Downs1957anec}, \cite{Matsusaka1995exvo} argues that uninformed voters are less certain than informed voters about their perception of electoral preferences. While his primary interest is in the turnout decisions, his theory implies that uninformed voters, compared to informed voters, may discount their preferences when making vote choice. Empirical evidence supports this claim. For example, \cite{Dellicarpini1996wham} find that the predictive power of ideology in voting is weaker among less-informed voters. Therefore, the first hypothesis is constructed as follows:
+
+    \begin{verse}
+        H1: The less-informed that voters are, the less strongly the perception of ideology and valence explains their voting decisions.
+    \end{verse}
+
+    \par If uninformed voters do not rely on their individual preferences, are their voting decisions inherently based on identity and random disturbances? The long history of research on social context influence on voting suggests that is not necessarily the case. Even when voters do not possess the sufficient information to form their own preference with certainty, they may still learn and utilize the distribution of others' partisan preferences in the society (called \textit{partisan environment}). Voters obtain this knowledge from past election results and preferences of others in the social network. The second hypothesis states that the differences between informed and uninformed voting originate from the use of this contextual information:
+
+    \begin{verse}
+        H2: The less-informed that voters are, the more strongly a partisan environment explains their voting decisions. 
+    \end{verse}
+
+    \noindent Voters may respond to a partisan environment in either of two different ways: \textit{bandwagoning} and \textit{balancing}. Both patterns have theoretical and empirical support to validate their underlying logic. The following subsections explain why uninformed voters, and only uninformed voters, have a reason to bandwagon with or balance against the partisan environment.
+
+    \subsection*{Bandwagoning}
+
+    \par Bandwagoning indicates the pattern of behavior to vote in line with the majority in a partisan environment. This pattern of context-based voting is supported by ample empirical evidence. Early inquiries of local context and voting suggest that voters living under a highly skewed partisan environment, captured by partisan voting patterns in past election results, have a strong tendency to vote in line with the majority party \citep{Miller1956onpo, Putnam1966poat}. The collection of social network studies also finds that majority preference in one's political discussion network predicts voting decisions \citep{Huckfeldt1987nein, Huckfeldt1995cipo, Huckfeldt2014nobi}. In addition, experimental studies confirm bandwagoning behavior both in lab \citep{Bischoff2013soin, Morton2015whmo, Tyran2016exev} and online survey \citep{Roy2015anex,vanderMeer2016ofth, Dahlgaard2017hoel}. In those experiments, participants are randomly assigned to receive the signal about the majority preference (or the candidate/party winning the election) or not. The results show that receivers of the contextual signal are more likely to act in line with the majority than those who do not receive the signal.
+
+    \par There are numbers of theoretical rationales as to why bandwagoning should occur \citep{Hardmeier2008thef}. While psychological explanations emphasize the natural instinct or ``feels good'' aspect of joining on the winner's side, voters may have a logical incentive to use majority preference as a heuristic to find ``correct'' choices in elections \citep{Lupia1994shve, Lau2001adan}.\footnote{The separate set of theoretical studies focuses on the role of bandwagoning to maximize the impersonal utility \citep{Coate2004grru, Feddersen2006thca, Feddersen2006thof} but this theory does not speak to the difference between informed and uninformed voters.} It is reasonable to expect that the heuristic-based bandwagoning is weaker among informed than uninformed voters because those with abundant resources to support their own preferences tend to be resistant to the reception of additional signals \citep{Zaller1992thna}. Empirical evidence is consistent with this claim. For example, the mock election experiment conducted by \cite{Huckfeldt2014nobi} shows that voting decisions of participants who are able to receive more private information about their preference are affected less by the preference signals obtained through communication with other participants. Similarly, the survey experiment conducted by \cite{Roy2015anex} indicates that the depth of obtained candidate information moderates bandwagoning behavior. \cite{Roy2015anex} design a mock election in which respondents can search for information about candidates. After the search, the random subset of participants receives the result of the pre-election polling that contains the information regarding the leading candidate in the election. The experiment results show that the bandwagoning effect of pre-election polling treatment is weaker for those who searched more information about candidates (i.e., informed voters) than for those who searched less (i.e., uninformed voters). 
+    
+    \par The heuristic explanation of bandwagnoning implicitly assumes that uninformed voters share the common preference with other voters in the same environment. In turn, the ideological homogeneity of the society would strengthen the relationship between a partisan environment and bandwagoning behavior. Under the context of American presidential elections, the ideological preferences are highly heterogenous at the national level. On the other hand, the patterns of racial and partisan geographic sorting (\citealt{Charles2003thdy,TamCho2013vomi} but \citealt{Mummolo2017whpa}) suggest that local distributions of ideological preferences are more homogenous than the national distribution. Local partisan environments often have a weak connection to winning or losing in the national election, but can be an effective heuristic in inferring how others with similar ideology vote.
+
+    \par In sum, the third hypothesis suggests that bandwagoning is primarily occurring in response to the local partisan environment among uninformed voters:
+
+    \begin{verse}
+        H3: The more skewed the local partisan environment, the more likely uninformed voters (and not informed voters) vote with the majority party in the local partisan environment. 
+    \end{verse}
+
+    \subsection*{Balancing}
+
+    \par Under the context of the American presidential system, scholars frequently discuss balancing in terms of vote switching in mid-term elections \citep{Alesina1995papo}. More generally, scholars understand balancing as the strategy of ideologically moderate voters to prevent policy outcomes from skewing overly toward one direction. While balancing tends to require the cognitively demanding task of understanding complex electoral and policy-making institutions, empirical studies show that many voters do get involved in balancing behavior under various contexts \citep{Kedar2005whmo, Kedar2006hovo, Folke2012gumi}.  
+    
+    \par In the scope of the current research, balancing is the pattern of behavior to vote against the majority in the partisan environment. The voting model presented in \cite{Feddersen1996thsw} explains why uninformed voters, and not informed voters, have an incentive to conduct such balancing. Their model categorizes voters into partisans, informed independents, and uninformed independents and explains the behavior of each type of voters. Through the equilibrium analysis, they show that informed independents and partisans vote for their individual preference, but uninformed independents vote to ``maximize the probability that the informed independent agents determine the winner'' \citep[][p.414]{Feddersen1996thsw}. To achieve this purpose, when they vote, uninformed independents have an incentive to balance out the partisan imbalance in society. This balancing increases the likelihood of informed independents determining the outcome, which favors the interest of uninformed independents. 
+
+    \par To get an intuitive sense of balancing, back to \autoref{eq1}. $B$ and $R$ partisans (i.e., having large difference between $\left(\widehat{\delta_i-\Delta_{R}}\right)^2$ and $\left(\widehat{\delta_i-\Delta_{B}}\right)^2$) have a strong ideological preference toward parties, so they almost always vote for their own party. Here, ideologically moderate voters benefit more from electing the \textit{better} party in terms of common quality (i.e., $\Theta_{R} - \Theta_{B}$ differential). Informed voters know, while uninformed voters don't know, which party has the better quality. The balancing logic suggests that moderate uninformed voters are less likely to vote for the parties with a larger number of partisans. This balancing behavior increases the likelihood of a moderate informed voter, whose decision should benefit moderate uninformed voters, being the median pivotal voter in the election. The series of lab experiments with university student subjects provide the empirical support for this mechanism \citep{Battaglini2008inag, Battaglini2010thsw}.
+    
+    \par The balancing concerns the type of voters determining the electoral outcome. In American presidential elections, the outcome of interest is at the national level.\footnote{Technically, American presidential election is a two-step process. The national-level vote share does not always determine, but plays an important role in the electoral outcome.} It makes sense for uninformed voters to balance their votes against the national than the local partisan environment. Therefore, the fourth and last hypothesis of this paper is constructed as follows:
+
+    \begin{verse}
+        H4: The more skewed the national partisan environment, the more likely uninformed voters (and not informed voters) vote against the majority party in the national partisan environment. 
+    \end{verse}
+
+    \subsection*{The Model of Context-based Uninformed Voting}
+
+    \par If implications from H1, H2, H3, and H4 hold, \autoref{eq1} can be modified as follows: 
+    \begin{align}
+        Pr(\text{Vote R})_i  =&  \Lambda( k_i \times \left( b_1\left(\widehat{(\delta_i-\Delta_{R})}^2 - \widehat{(\delta_i-\Delta_{B})}^2 \right) + b_2\left(\widehat{\Theta_{R} - \Theta_{B}}\right) \right) \notag \\
+        &+ (1-k_i) \times \left( b_3\pi_R(Local) - b_4\pi_R(National)\right) + \gamma_i + \epsilon_i ) \label{eq5} 
+    \end{align}
+    \noindent Modified part of \autoref{eq5} is expressed as the weighted average of preference perceptions and partisan environments. While the role of ideology and valence perceptions is strengthening in political knowledge $k_i$ (H1), the role of partisan environments is strengthening in the lack of knowledge $1-k_i$ (H2). In the second line, $\pi_R \in [0,1]$ represents party $R$ supporters' proportion in a given partisan environment and $b_3, b_4 \geq 0$ are coefficients attached to each partisan environment. Then, the probability of $R$ vote is increasing in the local partisan environment $\pi_R(Local)$ (H3) and decreasing the national partisan environment $\pi_R(National)$ (H4).
+
+    \section*{Study 1: Local Partisan Environment and Uninformed Voting}
+
+    \par This section examines the relationship between local partisan environment and vote choices in American presidential elections. Specifically, I use the Cooperative Congressional Election Study (CCES) conducted in 2008 and 2016. Each respondent is matched with past presidential election outcomes aggregated at the level of their local environment (i.e., state and county of residence). The election data are obtained from CQ Press Voting and Election Collections.\footnote{\url{http://library.cqpress.com/elections}. Accessed through subscription at the library of the University of California, Davis.}
+    
+    \par The advantage of using CCES for the analysis of the local partisan environment is that the dataset includes a large number of respondents from different locations across the United States, providing sufficient variations and data points at both county and state level. While CCES recruits respondents from online and thus the sample is not nationally representative, it is validated that most of the actual election results do fall within the 95\% confidence interval of the weighted estimates from CCES samples \citep{Ansolabehere2011guto, Ansolabehere2017guto}. The following analysis applies weights provided by CCES organizers to correct for the potential bias in sampling.\footnote{Since the analysis includes the post-election variable of vote choice, post-election weights are used for CCES2016. General weights are used in CCES2008 because post-election weights are not provided.}
+
+    \subsection*{Variables}
+    
+    \par The primary dependent variable for this study is the vote choice in presidential elections. To simplify the analysis, I focus on the binary choice between Republican and Democratic candidates and thus drop reported third-candidate choosers and abstainers from the analysis.\footnote{Turnout decision and third-candidate voting deserves a separate set of discussions, but that is not the central focus of this paper.} To explain the dichotomous vote choice, four sets of predictors are relevant. First, the measure of \textit{political knowledge} is constructed from eight factual test questions in CCES concerning the knowledge of the majority party in legislatures and party name of incumbent politicians. The correct answers are aggregated to construct the information scale (the Cronbach's alpha is 0.84 in 2008, 0.87 in 2016). The final score is normalized between 0 and 1.
+    
+    \par Second, the measures of \textit{local partisan environment} are constructed by linking the results of past elections with each respondent in CCES. Past electoral outcomes may not be the direct representation of the partisan composition of the society, but the evident pattern in the past elections gives a strong clue as to how partisan preferences are distributed within society. From CQ Press Voting and Election Collections, I collected county and state level outcomes of presidential elections. Using two-party Republican vote share in each local unit, the adapted versions of \textit{Cook Political Report} Partisan Voter Index (PVI)\footnote{\url{https://www.cookpolitical.com/pvi}} are calculated. State level PVI uses the following formula for each state $i$ and election cycle $t$: 
+    \begin{align*}
+    \textit{(State PVI)}_{t,i} = \{ & (\textit{(State Republican Share)}_{t-1, i} - \textit{(National Republican Share)}_{t-1}) + \\  
+    &(\textit{(State Republican Share)}_{t-2, i} - \textit{(National Republican Share)}_{t-2}) \}/2
+    \end{align*}    
+    \noindent In the above formula, $t$ represents the current election, and $t-1$ and $t-2$ represent the previous two elections. $\textit{(State Republican Share)}_i$ indicates two-party vote share of the Republican party against the Democratic party in state $i$. Thus, \textit{State PVI} represents the average advantage of Republican party vote share over the Democratic party, relative to the national tendency in the previous two elections. Two elections are averaged to determine the long-term trend in a partisan environment. The positive scores indicate the advantage in Republican vote share in percentage points, and the negative scores indicate the advantage in Democratic vote share in percentage points. In addition, county level PVI measures are calculated using the following formula:
+    \begin{align*}
+        \textit{(County}& \textit{PVI)}_{t,i,j} = \\
+        \{ &(\textit{(County Republican Share)}_{t-1, j} - \textit{(State Republican Share)}_{t-1,i}) + \\  
+        &(\textit{(County Republican Share)}_{t-2, j} - \textit{(State Republican Share)}_{t-2, i}) \}/2
+    \end{align*}    
+    \noindent Notice that the above formula adjusts the PVI for county $j$, not by national-level vote shares but by state-level vote shares. Therefore, the measure captures the partisan deviation of each county from the state average. Consequently, the correlations between state and county or district PVI are very low (ranges from $-0.01$ to $0.14$) and inlusion of both variables in one model makes sense.
+    % (-0.086 for 08 county,  -0.01108314 for 08 district  -0.04256889 for 16 county -0.1421199 for 16 district)
+        
+    \par The third set of predictors is \textit{individual preferences}. relative ideological proximity (based on squared ideological distance from each candidate, ranges from $-36$ to $36$), and the retrospective economic evaluation (ranges from $-2$ to $2$). All variables are scaled so that the higher score indicates preference toward Republican party candidates (see Online Appendix A for detailed constructs). All preference variables are based on the subjective perceptions. In contrast to objective measures that aim to capture ``true'' preference of voters, the subjective preference, even when it is potentially biased, is most likely to influence voting decisions. 
+
+    \par The last sets of predictors are \textit{partisanship} and \textit{demography}, including party identification (ranges from $-3$ to $3$), gender, age, race, income, education, and religiosity. The theory has no specific expectations regarding how the impact of partisanship demographic variables interact with political knowledge, but those variables are included in the analysis to control for the baseline tendency in voting behavior. 
+    
+    \subsection*{Model}
+
+    \par The predictive model intends to identify the differential behavioral patterns between uninformed and informed voters. This paper follows the approach taken by \cite{Bartels1996unvo} to include the complete set of linear interactions between predictors and political knowledge. 
+    %The final model appears as follows:
+    % \begin{align*}
+    % Pr&(\text{Vote Republican})_i = \Lambda\{\\
+    % &\alpha + \beta (\text{Political Knowledge})_i +  \\
+    % &\delta_{1-2} (\text{Local Partisan Environments})_i + \gamma_{1-2} (\text{Local Partisan Environments})_i \times \text{Knowledge}_i + \\
+    % &\delta_{3-5} (\text{Individual Preferences})_i + \gamma_{3-5} (\text{Individual Preferences})_i \times \text{Knowledge}_i + \\
+    % &\delta_{6-10} (\text{Demographics})_i + \gamma_{6-10} (\text{Demographics})_i \times \text{Knowledge}_i \}
+    % \end{align*} 
+    % \noindent 
+    Assuming that a linear relationship exists between political knowledge and the impact of each predictor, this method allows estimation of conditional coefficients of each predictor at different levels of political knowledge. After the estimation, I generate the conditional coefficient of each predictor for fully informed (political knowledge $= 1$) and uninformed (political knowledge $=0$) voters.
+
+    \par I use logistic regression to estimate the impact of predictors on vote choice (Democrat = 0, Republican = 1). Standard errors are clustered by states and counties to incorporate common behavioral tendencies within those areas.\footnote{The results are robust to the alternative specification using mixed effects logistic regression with states and counties random effects. See Online Appendix.} In addition, the multiple imputation procedure \citep{King2001anin} is used to handle the missing responses in the dataset. The presented results are the average from analyses of five imputated datasets.
+    
+    \subsection*{Results}
+    
+    \begin{figure}[t!]
+        \caption{The impact of local partisan environments and individual preferences on informed and uninformed presidential vote choice in CCES (2008, 2016)}
+        \label{fig:ccescoefplot}
+        \includegraphics[width=\linewidth]{../outputs/ccescoefplot.png}
+    \end{figure}
+
+    \par The summary of presidential vote choice model is presented in \autoref{fig:ccescoefplot}. The figure shows conditional odds ratios for fully informed voters (political knowledge $= 1$) and uninformed voters (political knowledge $= 0$) with 95\% confidence intervals. The figure omits demographic variables and intercepts (see Online Appendix A). The first and second rows of the plot show the impact of the local partisan environment on voting behavior. Consistent with H2, the odds ratios of state and county PVI are larger for uninformed voters than for informed voters. All PVI coefficients for uninformed voters are statistically significant ($p<0.05$), while three out of four PVI coefficients for informed voters are not statistically significant ($p>0.05$). The result also gives consistent support of H3 (bandwagoning): By every 10\% movement in local PVI towards Republican, uninformed voters are 1.5 to 2 times (for state PVI), and 1.2 times (for county PVI) more likely to vote for Republican than Democrat.
+    
+    \par For individual preference variables, the result generally supports H1. Ideology and retrospective economic evaluation variables have significantly larger odds ratios for informed than for uninformed voters. The partisanship variable, on the other hand, has a similar level of power to explain vote choice among informed and uninformed voters. Uninformed voters do not rely on ideological preferences and retrospective evaluations while using party identity in a way similar to that of informed voters.
+    
+    \par To gain deeper understandings of results regarding contextual variables, I simulate the predicted probability of the Republican vote through the Monte Carlo method. Since the estimated model includes complex sets of interacted variables, the simulation takes two steps. First, I estimated the predicted probability of vote choice for each respondent in surveys by manipulating the values only of the local partisan environment (from 5th percentile to 95th percentile), and political knowledge ($0$ and $1$). Each prediction is made by drawing 1,000 random coefficients according to the multivariate normal distribution, with mean as a point estimate and clustered standard error. Second, I averaged predicted probabilities according to the population weight provided in CCES. This procedure gives the approximation of the average two-party Republican vote probability under the given local partisan environment and knowledge level.
+
+    \begin{figure}[t!]
+        \caption{Local partisan environments and average predicted probability of two-party Republican vote in CCES (2008, 2016)}
+        \label{fig:ccespredplot}
+        \includegraphics[width=\linewidth]{../outputs/ccespredplot.png}
+    \end{figure}
+        
+    \par \autoref{fig:ccespredplot} plots the simulation result. The shaded area represents 95\% confidence intervals in prediction. Here, uninformed voters strongly respond to the local partisan environment, while informed voters don't.  Especially in 2016, the local partisan environment significantly raises the predicted vote probability of Trump among uninformed voters. The movement from the 5th percentile to the 95th percentile in state PVI and county PVI each correspond with a 10 to 13\% increase in Republican vote share. The impact of the local partisan environment in the 2008 election is somewhat weaker, but the predicted Republican vote probability for uninformed voters increase from $41.0$\% to $52.7$\% when the state PVI moves from and 11.7\% Democratic advantage (5th percentile) to an 11.4\% Republican advantage (95th percentile).
+    
+    \par The current study highlights the importance of the local partisan environment in explaining uninformed voting (but not informed voting). Uninformed voters show a clear tendency of bandwagoning: to vote in line with the majority in the local environment. Informed voters, on the other hand, rely mostly on their individual responses to make voting decisions and are unresponsive to the local partisan environment.
+
+    \section*{Study 2: National Partisan Environment and Uninformed Voting}
+
+    \par This section examines the relationship between the national partisan environment and voting choice in American presidential elections. I use the collection of data from American National Election Studies (ANES), conducted during presidential elections that occurred between 1972 and 2016.\footnote{I limit the analysis to respondents interviewed in face-to-face or phone mode. Online survey samples are dropped from the analysis due to comparability issues.} This dataset covers 12 presidential elections over a 44-year period, which reveals sufficient variations to assess the impact of the national partisan environment on uninformed voting. As in Study 1, the national partisan environment at each election is captured by the data obtained from CQ Press Voting and Election Collections. 
+
+    \subsection*{Variables}
+    
+    \par The primary dependent variable for this study is the vote choice in presidential elections. As in Study 1, I focus on the binary choice between Republican and Democratic candidates and drop reported third-candidate choosers and abstainers from the analysis. The interviewer's rating of knowledge is used as the measure of \textit{political knowledge}. While this measure does not directly reflect the factual knowledge of respondents, it has a favorable quality to ensure comparability across surveys over time. The resultant measure is normalized to the range between 0 and 1, following the procedure that is taken by \cite{Bartels1996unvo}. The robustness check using the knowledge measure based on factual test questions yields similar results (see Online Appendix B).
+    
+    \par The measures of \textit{national partisan environment} are constructed in a way similar to those for the local partisan environment. Specifically, the national PVI uses the following formula for each election cycle $t$:
+    \begin{align*}
+        \textit{[National PVI]}_{t} = \{ & \textit{[National Republican Share]}_{t-1} + \\  
+        &\textit{[National Republican Share]}_{t-2} \}/2
+    \end{align*}
+    \noindent \textit{National PVI} represents the national advantage of Republican party vote share over the Democratic party. The measure averages two previous elections to adjust for any short-term noise imposed during a single election cycle.
+        
+    \par In addition, \textit{individual preference} predictors (i.e., relative ideological advantage is based on squared distance from candidates, partisanship, and the retrospective economic evaluation) and \textit{demographic} controls (i.e., gender, age, race, income, education, and religion) are collected from each survey. All variables are scaled identically to the method used in Study 1 (see Online Appendix). 
+        
+    \subsection*{Model}
+
+    \par In conducting the analysis, pooling all election years into one dataset over-complicates the model, because the distribution and the predictive power of voter characteristics may differ across elections. To cope with this heterogeneity, I follow a three-step procedure. First, the model of vote choice is constructed and estimated for each election year. As in Study 1 and \cite{Bartels1996unvo}, each model includes the complete set of interactions between political knowledge and all other covariates and estimated by the logistic regression with population weights provided for each survey.
+    
+    \par In the second step, following the procedure in Study 1, I simulated the weighted average of predicted probability of the Republican vote for fully informed (political knowledge $=1$) and uninformed voters (political knowledge $=0$). To control for the change in voter characteristics across years, the prediction is made by fixing the voter profiles to the specific election year. By fixing the voter profile, the simulation produces the prediction of how informed and uninformed voters would have voted in each election if the distribution of individual preferences and demographic characteristics stays constant. 
+    
+    \par Lastly, simulated Republican vote probabilities are regressed on the national partisan environment using the Estimated Dependent Variable (EDV) model \citep{Lewis2005esre, Kasara2015whdo}. The EDV model incorporates measurement uncertainty in the dependent variable, in the current case the vote probability estimate, in running OLS regression. This procedure allows both flexible modeling of vote choice in each election and controlling of the change in distributions of voter preferences and characteristics over the years.
+    
+    \subsection*{Results}
+
+    \begin{figure}[t!]
+        \caption{The impact of individual preferences on presidential vote vhoice in ANES (1972--2016)}
+        \label{fig:anescoefplot}
+        \includegraphics[width=\linewidth]{../outputs/m1sq_anescoefplot.png}
+    \end{figure}
+
+    \par \autoref{fig:anescoefplot} shows the conditional coefficients of individual preferences extracted from the vote choice models estimated in each election year. The results are consistent with the findings from Study 1, supporting H1 except for partisanship. The left panel indicates that the coefficient of ideological alignment is larger for informed voters than for uninformed voters in 11 out of 12 elections except for the year 2000. Similarly, the coefficient of retrospective economic evaluation (the right panel) is larger for informed voters than for uninformed voters in 10 out of 12 elections except for 1980 and 1996. On the other hand, the results on partisanship variables (the central panel) are mixed. Informed voters have larger coefficients in only seven elections, and uninformed voters have larger coefficients in five other elections.
+
+    \par Following the described modeling procedure, \autoref{fig:anespredplot} presents the average predicted probabilities of Republican vote for fully informed (political knowledge $=1$) and uninformed (political knowledge $=0$) in each election year based on the 1992 voter profile. The voter profile from any given year yields similar results (see Online Appendix). 
+
+    \begin{figure}[t!]
+        \caption{National partisan environment and average predicted probability of two-party Republican vote in ANES (1972--2016)}
+        \label{fig:anespredplot}
+        \includegraphics[width=\linewidth]{../outputs/m1sq_1992_anespredplot.png}
+    \end{figure}
+
+    \par The left panel of \autoref{fig:anespredplot} implies that the national-level pattern of uninformed voting is a function of two factors: the national partisan environment and the incumbent party. Uninformed voters favor the incumbent party but balance against the overly skewed national partisan environment. The left panel shows that after controlling for incumbent party, the stronger the partisan skew towards Republican (the higher the score of national PVI), the less likely uninformed voters are to vote for Republican candidates. The fitted lines with the 95\% confidence interval from the EDV regression show that two factors produce almost a perfect fit of the variations in average uninformed Republican vote probabilities. The right panel indicates that this pattern does not exist for informed voters: The average predicted probability of informed Republican votes are mostly unresponsive to the change in incumbent party and the national partisan environment.
+    
+    \section*{Discussion}
+    
+    \par Overall, the analysis suggests that local and national partisan environments play a crucial role in explaining the behavior of uninformed voters. While informed voting is dominated by individual preferences, uninformed voters bandwagon with the local partisan environment (Study 1) and balance against the national partisan environment (Study 2). The result of this study provides consistent evidence that informed and uninformed voters apply different logic in making vote choices. Especially, the evidence of balancing implies that uninformed voters have an incentive and an ability to vote strategically.
+    
+    \par This study offers clues to answer the question left in the empirical studies of information effects: \textit{Why} does information make a systematic difference in the outcome of voting choices? The partisan environment is one of the key variables to understand why informed and uninformed voters act in different ways. Using this result, the scholarly debate on civic competence can move forward instead of focusing on how illogical and unpredictable uninformed voters are, the conversation can shift to the exploration of how the logic of uninformed voting relates to the quality of democratic outcomes. 
+    
+    \par Three caveats remain. First, it is not clear if the findings can be generalized outside of the context of presidential elections under a two-party system. Further exploration of voting patterns under parliamentary and multi-party system is needed. Second, the measurement of the partisan environment has an issue of visibility. The objective measure used in this study does not ensure that this information is directly observed by the respondent. Further research should consider how the knowledge of the partisan environment is communicated to uninformed voters (e.g., social network and public opinion polls). Third, this study ignores the participation incentives of uninformed voters. Many studies suggest that political knowledge plays an important role in turnout decisions \citep{Matsusaka1995exvo, Dellicarpini1996wham, Feddersen1996thsw, Lassen2005thef, Larcinese2007dopo, Gemenis2014voad}. To fully grasp the picture of uninformed voting, one needs to take abstention incentives into account.
+    
+    \par Finally, one promising direction in which to extend the current analysis is exploration of the interactive nature of context-based uninformed voting. The recent developments in game theoretic and simulation research suggest that after accounting for the dynamic interaction process among voters or between voters and a policymaker, the lack of voter information is not crucial for, or even improving, the quality of democratic decisions \citep{Ashworth2014isvo, Couzin2011unin}. Exploring the implications of those interactions for context-based uninformed voting would be an important contribution to this line of inquiry. 
+    
+    %\clearpage
+    % \theendnotes
+    \singlespacing
+    %\nocite{*}
+    \bibliographystyle{apsr}
+    % \bibliography{C:/GoogleDrive/Reference/list_jabref.bib}
+    %\bibliography{/home/gentok/GoogleDrive/Reference/list_jabref.bib}
+    \bibliography{uninformedchoice.bib}
+
+    \input{Kato2019loba_v14_appendix.tex}
+    
+\end{document}
